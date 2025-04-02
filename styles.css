@@ -1,0 +1,181 @@
+/* This is a CSS file that sets the font for the entire document to Lato and changes the text color to red. */
+/* Importing the Lato font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+* {
+    color: rgb(191, 10, 197);
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+    color: black;
+    text-align: center;
+    line-height: 1.25;
+}
+
+h1 {
+    padding-top: 25px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+p {
+    padding-top: 25px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.row {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.text--green {
+    color: rgb(6, 224, 224);
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    height: 100px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__link--lists {
+    display: flex;
+    padding-bottom: 25px;
+    align-items: center;
+}
+
+.nav__link--anchor {
+    margin: 0 12px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    align-items: center;
+}
+
+.nav__link--anchor-primary {
+    background-color: green;
+    border-color: green;
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: black;
+    align-items: center;
+}
+
+.nav__link--anchor-primary:hover {
+    background-color: purple;
+    color: white;
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.personal__logo {
+    font-size: 20px;
+    color: purple;
+    margin: 0 12px;
+    font-weight: bold;
+    align-items: center;
+}
+
+/* ABOUT ME */
+
+#about-me {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me__info--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+
+}
+
+.about-me__picture--mask {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px, 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 28px;
+
+
+}
+
+.about-me__picture--container {
+    width: 100%;
+    /* improving my picture */
+}
+
+.about-me__info--para {
+    font-size: 20px;
+    margin-bottom: 28px;
+}
+
+.about-me__info--title {
+    margin-bottom: 16px;
+}
+.about-me__links{
+    font-size: 32px;
+    color: black;
+    text-decoration: none;
+    padding: 0 16px;
+}
+
+.about-me__image--mask {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px, 16px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
