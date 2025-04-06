@@ -9,6 +9,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    ;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -35,6 +40,45 @@ p {
     font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+
+}
+
+a:hover .link__hover-effect:after {
+    content: "";
+    transform: scaleX(1);
+}
+
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+
+}
+
+.link__hover-effect--white:after {
+    background-color: #fff;
+
+}
+
+.link__hover-effect--black:after {
+    background-color: #000;
+
+}
+
+.link__hover-effect:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+
 li {
     list-style-type: none;
 }
@@ -45,9 +89,14 @@ li {
 
 .flex-1 {
     flex: 1;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background-color: #fff;
+
+
+}
+
+
+.container {
+    padding: 50px 0;
 
 }
 
@@ -55,11 +104,33 @@ li {
     width: 100%;
     max-width: 650px;
     margin: 0 auto;
+    padding: 0 12px;
 }
 
 .text--green {
-    color: rgb(6, 224, 224);
+    color: darkred;
 }
+
+
+.section__title {
+    margin-bottom: 20px;
+}
+
+.section.section:nth-child(even) {
+    background-color: darkgrey
+    color: white;
+
+}
+
+.section.section:nth-child(odd) {
+    background-color: #708090;
+    color: black;
+
+
+}
+
+
+
 
 /* NAVIGATION BAR */
 
@@ -71,18 +142,19 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 12px;
 }
 
 .nav__link--lists {
     display: flex;
     padding-bottom: 25px;
     align-items: center;
+    justify-content: end;
 }
 
 .nav__link--anchor {
     margin: 0 12px;
     color: black;
-    text-decoration: none;
     font-weight: 700;
     align-items: center;
 }
@@ -105,10 +177,13 @@ nav {
 
 .personal__logo {
     font-size: 20px;
-    color: purple;
-    margin: 0 12px;
+    color: darkred;
     font-weight: bold;
-    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
 }
 
 /* ABOUT ME */
@@ -119,12 +194,19 @@ nav {
     flex-direction: column;
 }
 
+.about-me__info {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
 .about-me__info--container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
@@ -132,7 +214,7 @@ nav {
 }
 
 .about-me__picture--mask {
-    width: 100px;
+    width: 100%;
     height: auto;
     border-radius: 50%;
     display: flex;
@@ -150,32 +232,397 @@ nav {
 .about-me__picture--container {
     width: 100%;
     /* improving my picture */
+
+
+}
+
+.about-me__text--color {
+    color: darkred;
 }
 
 .about-me__info--para {
     font-size: 20px;
     margin-bottom: 28px;
+    max-width: 420px;
+    color: white;
+
+
 }
 
 .about-me__info--title {
     margin-bottom: 16px;
+    max-width: 100%;
+
 }
-.about-me__links{
+
+.about-me__links {
     font-size: 32px;
     color: black;
-    text-decoration: none;
     padding: 0 16px;
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-me__image--mask {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: auto;
-    border-radius: 50%;
+    flex: 1;
+}
+
+.about-me__info--text--container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 1600px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 180px 20px;
+    text-align: center;
+
+
+}
+
+.about-me__image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    align-items: center;
+
+}
+
+
+.about-me__picture {
+    width: 100%;
+    transform: scale(.75);
+}
+
+
+/* TECH - STACK */
+
+.language__img {
+    height: auto;
+    margin: 0 auto;
     max-width: 100%;
     position: relative;
     z-index: 1;
-    box-shadow: 0 8px, 16px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
 }
+
+.language {
+    width: 25%;
+    justify-content: center;
+    position: relative;
+
+}
+
+.language__img {
+    width: 100%;
+    max-width: 100px;
+    transition: all 300ms ease;
+}
+
+.language:hover .language__img {
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(.9);
+}
+
+.language__img--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 16px;
+}
+
+.language__list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.language__name {
+    position: absolute;
+    transform: scale(0);
+    transition: all 300ms ease;
+    bottom: auto;
+    font-size: 20px;
+    opacity: 0;
+
+}
+
+.language:hover .language__name {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.container {
+    background-color: white;
+}
+
+/* PROJECTS */
+
+.project {
+    position: relative;
+}
+
+.project:last-child {
+    margin-bottom: 40px;
+}
+
+.project__img {
+    width: 100%;
+    transition: all 500ms ease;
+    display: block;
+}
+
+.project__wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project__wrapper:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1d25;
+    opacity: 0;
+    transition: opacity 450ms ease;
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 8px;
+}
+
+.project__wrapper:hover:before {
+    opacity: 0.8;
+
+}
+
+.project__wrapper:hover .project__img {
+    transform: scale(1.05);
+    filter: blur(5px);
+}
+
+.project__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    padding-top: 40px;
+    margin-bottom: 160px;
+
+}
+
+.project__description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: transform 450ms, opacity 300ms;
+
+
+}
+
+.project:hover .project__description {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.project:hover>.project__description .project__description--para {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.project__description--title,
+.projecct__description--sub-title,
+.project__description--para,
+.project__description--link {
+    margin: 10px 0;
+}
+
+.project:hover .project__description--para {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project__description--para {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    margin: 16px 0;
+}
+
+.project__description--link {
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+    margin-right: 16px;
+
+}
+
+.project__description--link:hover(transform: scale(1.05);
+    transition: all 0.3s ease;
+
+) .project__description--title {
+    font-size: 40px;
+}
+
+.project__wrapper:hover .project__description {
+    opacity: 1;
+    transform: translate(-50%, -50%)
+}
+
+/* FOOTER */
+/* The footer section provides a consistent closing element for the webpage, 
+   including social media links, a logo, and copyright information. 
+   It is styled to align content centrally and uses a dark background for contrast. */
+
+footer {
+    background-color: #242424;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+.footer__social--list {
+    width: 100%;
+    margin-bottom: 2.25px;
+    justify-content: space-between;
+}
+
+
+.footer__row {
+    padding: 8%
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__logo--img {
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer__social--link,
+.footer__copyright,
+.footer__logo--popper {
+
+    color: #fff;
+}
+
+.footer__logo--popper {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    font-weight: 700;
+    opacity: 0;
+    transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.footer__anchor {
+    position: relative;
+}
+
+.footer__anchor:hover .footer__logo--popper {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+
+}
+
+/* MEDIA QUERIES */
+/* The media queries section adjusts the layout and styles of the webpage for smaller screens(large phones, tablets), ensuring a responsive design. 
+   It modifies font sizes, flex properties, and padding to enhance readability and usability on mobile devices. */
+
+@media (max-width: 768px) {
+    nav {
+        height: 68px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .about-me__info--para {
+        font-size: 18px;
+    }
+
+    .language {
+        width: calc(100% / 2);
+    }
+
+    .project__description--para {
+        font-size: 14px;
+    }
+
+}
+
+/* The media queries section adjusts the layout and styles of the webpage for smaller screens(smaller smart phones), ensuring a responsive design. */
+
+@media (max-width: 480px) {
+    nav {
+        height: 68px;
+    }
+
+    .nav__link:not(:last-child) {
+        display: none;
+    }
+
+    .project__description--para {
+        display: none;
+    }
+
+    .project__description--links {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .projecct__description--sub-title {
+        text-align: center;
+        margin: 12px 0;
+    }
+
+    .project__description--title {
+        line-height: 1;
+        font-size: 24px;
+        text-align: center;
+
+    }
