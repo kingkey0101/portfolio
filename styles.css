@@ -44,7 +44,20 @@ a {
     text-decoration: none;
     position: relative;
     display: inline-block;
+    transition: opacity 300ms ease;
 
+}
+
+a:hover{
+    opacity: ;
+}
+
+i{
+    transition: opacity 300ms ease;
+}
+
+i:hover{
+    opacity: 0.7;
 }
 
 a:hover .link__hover-effect:after {
@@ -89,7 +102,7 @@ li {
 
 .flex-1 {
     flex: 1;
-    background-color: #fff;
+    background-color: slategray;
 
 
 }
@@ -225,8 +238,22 @@ nav {
     z-index: 1;
     box-shadow: 0 8px, 16px rgba(0, 0, 0, 0.1);
     margin-bottom: 28px;
+    animation: animate-picture-mask 800ms 200ms backwards;
 
 
+}
+
+@keyframes animate-picture-mask{
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .about-me__picture--container {
@@ -240,11 +267,17 @@ nav {
     color: darkred;
 }
 
+.about-me__text--color a {
+    color: #000 !important;
+    text-decoration: none;
+}
+
 .about-me__info--para {
     font-size: 20px;
     margin-bottom: 28px;
     max-width: 420px;
     color: white;
+    animation: fade-up 650ms 600ms backwards;
 
 
 }
@@ -252,18 +285,35 @@ nav {
 .about-me__info--title {
     margin-bottom: 16px;
     max-width: 100%;
+    animation: fade-up 650ms 400ms backwards;
 
 }
 
+
+
 .about-me__links {
     font-size: 32px;
-    color: black;
+    color: black !important;
     padding: 0 16px;
     max-width: 420px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fade-up 650ms 800ms backwards;
+}
+
+@keyframes fade-up{
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
 }
 
 .about-me__image--mask {
@@ -272,6 +322,16 @@ nav {
     justify-content: center;
     width: 100%;
     flex: 1;
+}
+
+@keyframes fade-in {
+    0%{
+        opacity:0;
+    }
+
+    100%{
+        opacity: 1;
+    }
 }
 
 .about-me__info--text--container {
@@ -292,13 +352,40 @@ nav {
     max-width: 300px;
     height: auto;
     align-items: center;
+    animation: fade-in 1200ms 800ms backwards;
 
 }
 
 
 .about-me__picture {
-    width: 100%;
-    transform: scale(.75);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.waving-computer{
+    display: inline-block;
+    animation: animate-waving-computer 500ms infinite ease-in-out;
+
+
+}
+
+@keyframes animate-waving-computer{
+    0%{
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+
+    100%{
+        transform: rotate(0);
+    }
 }
 
 
