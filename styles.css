@@ -48,15 +48,15 @@ a {
 
 }
 
-a:hover{
+a:hover {
     opacity: ;
 }
 
-i{
+i {
     transition: opacity 300ms ease;
 }
 
-i:hover{
+i:hover {
     opacity: 0.7;
 }
 
@@ -105,6 +105,7 @@ li {
     background-color: slategray;
 
 
+
 }
 
 
@@ -130,8 +131,7 @@ li {
 }
 
 .section.section:nth-child(even) {
-    background-color: darkgrey
-    color: white;
+    background-color: darkgrey color: white;
 
 }
 
@@ -213,6 +213,10 @@ nav {
 
 }
 
+.about-me__info--para2{
+
+}
+
 
 .about-me__info--container {
     display: flex;
@@ -222,6 +226,18 @@ nav {
     max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    text-align: center;
+
+}
+
+.about-me__info--text--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1600px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 180px 20px;
     text-align: center;
 
 }
@@ -243,10 +259,11 @@ nav {
 
 }
 
-@keyframes animate-picture-mask{
+@keyframes animate-picture-mask {
     0% {
         transform: scale(0);
     }
+
     80% {
         transform: scale(1.5);
     }
@@ -273,7 +290,7 @@ nav {
 }
 
 .about-me__info--para {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 28px;
     max-width: 420px;
     color: white;
@@ -303,11 +320,12 @@ nav {
     animation: fade-up 650ms 800ms backwards;
 }
 
-@keyframes fade-up{
+@keyframes fade-up {
     0% {
         opacity: 0;
         transform: translateY(40px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -325,11 +343,11 @@ nav {
 }
 
 @keyframes fade-in {
-    0%{
-        opacity:0;
+    0% {
+        opacity: 0;
     }
 
-    100%{
+    100% {
         opacity: 1;
     }
 }
@@ -368,22 +386,23 @@ nav {
 
 }
 
-.waving-computer{
+.waving-computer {
     display: inline-block;
     animation: animate-waving-computer 500ms infinite ease-in-out;
 
 
 }
 
-@keyframes animate-waving-computer{
-    0%{
+@keyframes animate-waving-computer {
+    0% {
         transform: rotate(0);
     }
+
     50% {
         transform: rotate(30deg);
     }
 
-    100%{
+    100% {
         transform: rotate(0);
     }
 }
@@ -614,8 +633,7 @@ footer {
 
 
 .footer__row {
-    padding: 8%
-    flex-direction: column;
+    padding: 8% flex-direction: column;
     align-items: center;
     justify-content: center;
 }
